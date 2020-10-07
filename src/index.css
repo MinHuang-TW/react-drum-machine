@@ -54,12 +54,8 @@ body {
   text-align: center;
 }
 
-header p {
+header {
   display: none;
-}
-
-h1 {
-  font-size: 1.6rem;
 }
 
 button {
@@ -268,8 +264,13 @@ footer span {
 }
 
 @media screen and (min-width: 600px) {
-  h1 {
-    font-size: 2rem;
+  header {
+    display: initial;
+    margin-top: 2.5rem;
+  }
+
+  header h1 {
+    margin-bottom: 0.88rem;
   }
 
   header p {

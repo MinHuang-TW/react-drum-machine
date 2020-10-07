@@ -21,7 +21,7 @@ const App = () => {
     <div className='container'>
       <header>
         <h1>React Drum Machine</h1>
-        <p>FFC Front End Libraries Project</p>
+        <p>freeCodeCamp Front End Libraries Project</p>
       </header>
 
       <div id='drum-machine'>
