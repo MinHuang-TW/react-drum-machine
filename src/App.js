@@ -5,7 +5,7 @@ import './App.css';
 
 const App = () => {
   const [text, setText] = useState('Press Button or Key');
-  const [volume, setVolume] = useState(50);
+  const [volume, setVolume] = useState(100);
   const [mode, setMode] = useState(false);
 
   const handleSwitch = useCallback(() => {
@@ -21,7 +21,7 @@ const App = () => {
     <div className='container'>
       <header>
         <h1>React Drum Machine</h1>
-        <p>freeCodeCamp Front End Libraries Project</p>
+        <p>FFC Front End Libraries Project</p>
       </header>
 
       <div id='drum-machine'>
@@ -61,13 +61,14 @@ const App = () => {
             step='1'
             className='range'
             defaultValue={volume}
-            onMouseUp={handleVolume}
+            // onMouseUp={handleVolume}
+            onInput={handleVolume}
           />
         </div>
       </div>
 
       <footer>
-        <small>Made by Min with 🤍</small>
+        <small>Design & Code by <span>Min Huang</span></small>
       </footer>
     </div>
   );

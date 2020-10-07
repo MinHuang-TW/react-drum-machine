@@ -32,21 +32,34 @@ body {
   box-sizing: border-box;
   -webkit-user-select: none;
   user-select: none;
+  touch-action: manipulation;
+}
+
+*::-moz-selection {
+  background: transparent;
+}
+*::selection {
+  background: transparent;
 }
 
 .container {
   width: 80%;
   min-height: 100vh;
   margin: auto;
+  padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
-header {
+header p {
   display: none;
+}
+
+h1 {
+  font-size: 1.75rem;
 }
 
 button {
@@ -156,21 +169,24 @@ label input:checked ~ .indicator::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   background: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.6);
 }
 
 .drum-pads {
-  display: grid;
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, calc((80vw - 30px) / 3));
+  grid-template-rows: repeat(3, calc((80vw - 30px) / 3));
+  gap: 15px;
 }
 .drum-pad {
-  height: calc((90vw - 4rem) / 3);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: var(--radius);
-  font-size: 2.5rem;
   background:var(--clr-bg);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   color: var(--clr-secondary);
@@ -247,8 +263,16 @@ label input:checked ~ .indicator::before {
   color: var(--clr-hightlight);
 }
 
+footer span {
+  color: var(--clr-hightlight);
+}
+
 @media screen and (min-width: 600px) {
-  header {
+  h1 {
+    font-size: 2rem;
+  }
+
+  header p {
     display: initial;
   }
 
@@ -259,14 +283,17 @@ label input:checked ~ .indicator::before {
 
   .display {
     height: 8rem;
+    font-size: 2rem;
   }
 
   .drum-pads {
+    grid-template-columns: repeat(3, calc((400px - 4rem) / 3));
+    grid-template-rows: repeat(3, calc((400px - 4rem) / 3));
     gap: 2rem;
   }
 
   .drum-pad {
-    height: calc((60vw - 4rem) / 3);
     max-height: 7rem;
+    font-size: 2.5rem;
   }
 }
