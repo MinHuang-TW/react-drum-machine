@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 :root {
   --clr-hightlight: rgba(255, 255, 255, 1);
@@ -57,9 +57,7 @@ body {
 header h1 {
   margin: 0;
   width: 100vw;
-  color: black;
-  font-weight: 700;
-  text-shadow: 1px 2px 0px rgba(255, 255, 255, 0.25);
+  opacity: 0.25;
 }
 
 header p {

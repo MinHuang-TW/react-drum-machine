@@ -19,8 +19,8 @@ const App = () => {
   return (
     <div className='container'>
       <header>
-        <h1>React Drum Machine</h1>
-        <p>freeCodeCamp Front End Libraries Project</p>
+        <h1>Drum Machine</h1>
+        <p>Front End Libraries Project</p>
       </header>
 
       <main id='drum-machine'>
