@@ -274,11 +274,6 @@ footer span {
 }
 
 @media screen and (min-width: 600px) {
-  header {
-    display: initial;
-    margin-top: 2.5rem;
-  }
-
   header h1 {
     margin-bottom: 0.88rem;
     text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.25);
