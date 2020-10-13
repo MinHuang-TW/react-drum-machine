@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import DrumPad from './components/DrumPad';
 import audios from './constants/audioBank';
-import './App.css';
 
 const App = () => {
   const [text, setText] = useState('Press Button or Key');
@@ -24,7 +23,7 @@ const App = () => {
         <p>freeCodeCamp Front End Libraries Project</p>
       </header>
 
-      <div id='drum-machine'>
+      <main id='drum-machine'>
         <div id='display' className='display'>{text}</div>
         <div className='drum-pads'>
           {audios[mode ? 1 : 0].map((audio, index) => (
@@ -36,7 +35,7 @@ const App = () => {
             />
           ))}
         </div>
-      </div>
+      </main>
 
       <div className='controls'>
         <div className='kit-control'>
@@ -68,7 +67,7 @@ const App = () => {
       </div>
 
       <footer>
-        <small>Design & Code by <span>Min Huang</span></small>
+        <small>Made with 🤍 by <span>Min Huang</span></small>
       </footer>
     </div>
   );
